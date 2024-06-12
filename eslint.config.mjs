@@ -1,7 +1,6 @@
-
-// eslint.config.mjs
-import eslint from "@eslint/js"
-import tseslint from "@typescript-eslint"
+import eslint from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -9,19 +8,20 @@ export default tseslint.config(
   {
     languageOptions: {
       globals: {
-...globals.node,
-      }
-    }
+        ...globals.node,
+      },
+    },
   },
   {
     rules: {
       "no-unused-vars": "error",
-      "no-undef": "error",
-      "prefer-const" : "error",
+      "no-unused-expressions": "error",
+      "prefer-const": "error",
       "no-console": "warn",
-    }
+      "no-undef": "error",
+    },
   },
   {
-    ignores: ["**/dist/", "**/node_modules/"]
+    ignores: ["**/node_modules/", "**/dist/"],
   }
-)
+);

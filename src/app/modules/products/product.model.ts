@@ -1,4 +1,4 @@
-import { Schema, model, connect } from "mongoose";
+import { Schema, model } from "mongoose";
 import { TInventory, TProducts, TVariants } from "./product.interface";
 
 const variantsSchema = new Schema<TVariants>(
@@ -15,7 +15,7 @@ const variantsSchema = new Schema<TVariants>(
   {
     _id: false,
     versionKey: false,
-  }
+  },
 );
 
 const inventorySchema = new Schema<TInventory>(
@@ -33,7 +33,7 @@ const inventorySchema = new Schema<TInventory>(
   {
     _id: false,
     versionKey: false,
-  }
+  },
 );
 
 const productsSchema = new Schema<TProducts>({
@@ -67,5 +67,4 @@ const productsSchema = new Schema<TProducts>({
   },
 });
 
-
-export const productModel = model<TProducts>('products', productsSchema)
+export const productModel = model<TProducts>("products", productsSchema);
