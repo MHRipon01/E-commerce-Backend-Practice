@@ -13,7 +13,7 @@ Zod: A TypeScript-first schema declaration and validation library.
 # API Endpoints:
 
 ## Product Management
-#*Product Management:*# Create, retrieve, update, and delete products.
+*Product Management:* Create, retrieve, update, and delete products.
 Create a New Product
 
 -   Endpoint: /api/products
@@ -46,7 +46,7 @@ Search for a Product
 -   Endpoint: /api/products?searchTerm=name
 -   Method: GET
 
-#*Order Management:*# Create, retrieve, update, and delete orders.
+*Order Management:* Create, retrieve, update, and delete orders.
 
 ## Order Management
 
@@ -66,9 +66,9 @@ Retrieve Orders by User Email
 -   Method: GET
 
 
-#*Product Search:*# Search for products based on various criteria.
+*Product Search:* Search for products based on various criteria.
 
-#*Inventory Management:*# Keep track of product inventory levels.
+*Inventory Management:* Keep track of product inventory levels.
 
 ## Getting Started
 # Prerequisites
