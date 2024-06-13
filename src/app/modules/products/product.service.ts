@@ -26,6 +26,8 @@ const getSingleProduct = async (id: string) => {
   return result;
 };
 
+
+
 //update product
 const updateProductById = async (id: string, productData: TProducts) => {
   const updatedProduct = await productModel.findByIdAndUpdate(id, productData, {
