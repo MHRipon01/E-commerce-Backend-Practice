@@ -8,4 +8,4 @@ const orderSchema = new mongoose_1.Schema({
     price: { type: Number, required: true },
     quantity: { type: Number, required: true },
 }, { versionKey: false });
-exports.OrderModel = (0, mongoose_1.model)('order', orderSchema);
+exports.OrderModel = (0, mongoose_1.model)("order", orderSchema);

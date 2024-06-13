@@ -59,4 +59,4 @@ const productsSchema = new mongoose_1.Schema({
         required: [true, "Inventory is required"],
     },
 });
-exports.productModel = (0, mongoose_1.model)('products', productsSchema);
+exports.productModel = (0, mongoose_1.model)("products", productsSchema);

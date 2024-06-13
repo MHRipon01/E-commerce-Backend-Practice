@@ -12,19 +12,19 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 //application routes
-app.use('/api/products', product_route_1.ProductsRoute);
-app.use('/api/orders', orders_route_1.OrderRouter);
-app.get('/', (req, res) => {
+app.use("/api/products", product_route_1.ProductsRoute);
+app.use("/api/orders", orders_route_1.OrderRouter);
+app.get("/", (req, res) => {
     res.status(200).send({
         status: true,
-        message: 'Server running successfully',
+        message: "Server running successfully",
     });
 });
 // no route error
-app.get('*', (req, res) => {
+app.get("*", (req, res) => {
     res.status(404).json({
         success: false,
-        message: 'Route not found',
+        message: "Route not found",
     });
 });
 exports.default = app;

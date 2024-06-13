@@ -17,12 +17,13 @@ const createOrder = (order) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const isProductExits = yield product_model_1.productModel.findOne({
             _id: new mongoose_1.Types.ObjectId(order.productId),
-            'inventory.quantity': { $gte: order.quantity },
+            "inventory.quantity": { $gte: order.quantity },
         });
         if (!isProductExits) {
-            throw new Error('Insufficient quantity available in inventory');
+            throw new Error("Insufficient quantity available in inventory");
         }
-        isProductExits.inventory.quantity = isProductExits.inventory.quantity - order.quantity;
+        isProductExits.inventory.quantity =
+            isProductExits.inventory.quantity - order.quantity;
         if (isProductExits.inventory.quantity > 0) {
             isProductExits.inventory.inStock = true;
         }
@@ -34,6 +35,7 @@ const createOrder = (order) => __awaiter(void 0, void 0, void 0, function* () {
         return result;
     }
     catch (error) {
+        console.error("Error creating order:", error);
         throw error;
     }
 });

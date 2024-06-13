@@ -22,14 +22,15 @@ const createOrder = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         const order = yield orders_service_1.OrderService.createOrder(value);
         res.status(200).json({
             success: true,
-            message: 'Order created successfully!',
+            message: "Order created successfully!",
             data: order,
         });
+        /* eslint-disable @typescript-eslint/no-explicit-any */
     }
     catch (error) {
         res.status(500).json({
             success: false,
-            message: error.message || 'Something Went Wrong',
+            message: error.message || "Something Went Wrong",
             error: error,
         });
     }
@@ -43,14 +44,15 @@ const getAllOrders = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         const orders = yield orders_service_1.OrderService.getAllOrders(search);
         res.status(200).json({
             success: true,
-            message: 'Orders fetched successfully!',
+            message: "Orders fetched successfully!",
             data: orders,
         });
+        /* eslint-disable @typescript-eslint/no-explicit-any */
     }
     catch (error) {
         res.status(500).json({
             success: false,
-            message: error.message || 'Order not found',
+            message: error.message || "Order not found",
             error: error,
         });
     }
