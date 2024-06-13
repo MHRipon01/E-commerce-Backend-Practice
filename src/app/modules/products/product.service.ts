@@ -11,7 +11,7 @@ const createProduct = async (product: TProducts) => {
 const getAllProduct = async (searchTerm: string) => {
   if (searchTerm) {
     const result = await productModel.find({
-      name: { $regex: searchTerm, $options: "i" },
+      name: { $regex: searchTerm, $option: "i" },
     });
     return result;
   } else {

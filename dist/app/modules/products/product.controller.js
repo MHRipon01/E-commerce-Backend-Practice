@@ -43,7 +43,7 @@ const getAllProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         return res.status(200).json({
             success: true,
             message: searchTerm
-                ? `Products matching term ${searchTerm} fetched successfully`
+                ? `Products matching search term ' ${searchTerm} ' fetched successfully!`
                 : "Products fetched successfully!",
             data: result,
         });
@@ -120,7 +120,7 @@ const deleteProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* 
             return res.status(200).json({
                 success: true,
                 message: "Product deleted successfully!",
-                data: result,
+                data: null,
             });
         }
         else {
